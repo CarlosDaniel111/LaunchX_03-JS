@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pokedex</title>
+  </head>
+  <body onload="fetchPokemon()">
+    <header>
+      <img src="img/logo.png" alt="Pokemon" />
+      <h1>Pokédex</h1>
+    </header>
+    <div class="form">
+      <input type="text" name="pokeName" id="pokeName" class="input-pokemon" placeholder="Ingresa el nombre o el número de Pokémon"/>
+      <input
+        type="button"
+        value="Buscar"
+        onclick="fetchPokemon()"
+        class="btn-pokemon"
+      />
+    </div>
+
+    <div class="spinner desaparecer" id="spinner"></div>
+    <div class="error desaparecer" id="error">
+      <h2>NO EXISTE ESE POKEMON</h2>
+    </div>
+
+    <div class="card" id="card">
+      <div class="card-1">
+        <div class="head-card">
+          <div class="nombre">
+            <h4 id="nombre-poke"></h4>
+          </div>
+          <div class="numero">
+            <span id="numero-poke"></span>
+          </div>
+        </div>
+        <div class="pantalla">
+          <img src="" alt="Img Pokemon" class="pokeImg" id="pokeImg" />
+        </div>
+      </div>
+
+      <div class="card-2">
+        <div class="pokeTipo">
+          <div class="pktipo">
+            <span>Tipo:</span>
+          </div>
+          <div class="tipos" id="tipos"></div>
+        </div>
+
+        <h3 class="estadisTitle">Estadísticas</h3>
+        <div class="pokeEstadisticas">
+          <ul class="listaEsta">
+            <li>Ps</li>
+            <li>Ataque</li>
+            <li>Defensa</li>
+            <li>Ata. Esp.</li>
+            <li>Def. Esp.</li>
+            <li>Velocidad</li>
+          </ul>
+          <hr />
+          <ul>
+            <li class="estadis">
+              <span class="stat" id="ps-stat"></span>
+            </li>
+            <li class="estadis">
+              <span class="stat" id="ataque-stat"></span>
+            </li>
+            <li class="estadis">
+              <span class="stat" id="defensa-stat"></span>
+            </li>
+            <li class="estadis">
+              <span class="stat" id="ataesp-stat"></span>
+            </li>
+            <li class="estadis">
+              <span class="stat" id="defesp-stat"></span>
+            </li>
+            <li class="estadis">
+              <span class="stat" id="velocidad-stat"></span>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="estadisTitle">Movimientos</h3>
+        <div class="card-movi">
+          <div class="item-movi">
+            <ul class="list-movi" id="list-movi">
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script src="app.js"></script>
+  </footer>
+</html>
